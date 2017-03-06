@@ -1,7 +1,7 @@
 import { TestBed, async } from "@angular/core/testing";
 import {HomeComponent} from "./home.component";
 
-describe("Home", () => {
+describe("Digital Display Garden", () => {
 
     beforeEach(() => {
         TestBed.configureTestingModule({
@@ -15,6 +15,6 @@ describe("Home", () => {
 
     it("says a message", async(() => {
         const comp = TestBed.createComponent(HomeComponent);
-        expect(comp.componentInstance.text).toBe("Hello world!");
+        expect(comp.componentInstance.text).toBe("Welcome!");
     }));
 });
