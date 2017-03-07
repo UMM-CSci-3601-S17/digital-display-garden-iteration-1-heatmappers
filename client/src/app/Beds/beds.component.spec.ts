@@ -1,11 +1,11 @@
 import { TestBed, async } from "@angular/core/testing";
-import {HomeComponent} from "./home.component";
+import {BedsComponent} from "./beds.component";
 
-describe("Digital Display Garden", () => {
+describe("Beds", () => {
 
     beforeEach(() => {
         TestBed.configureTestingModule({
-            declarations: [HomeComponent]
+            declarations: [BedsComponent]
         });
     });
 
@@ -14,7 +14,7 @@ describe("Digital Display Garden", () => {
     }));
 
     it("says a message", async(() => {
-        const comp = TestBed.createComponent(HomeComponent);
-        expect(comp.componentInstance.text).toBe("Welcome!");
+        const comp = TestBed.createComponent(BedsComponent);
+        expect(comp.componentInstance.text).toBe("This is the beds page!");
     }));
 });
