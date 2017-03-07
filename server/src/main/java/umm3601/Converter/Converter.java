@@ -11,8 +11,11 @@ import org.apache.poi.ss.usermodel.*;
         import java.io.IOException;
         import java.util.ArrayList;
         import java.util.Iterator;
+        import java.util.*;
 
-public class Converter{
+
+
+public class Converter extends ArrayList{
 
 
 //    private final MongoCollection<Document> flowers;
@@ -77,9 +80,26 @@ public class Converter{
                     counter++;
 
                 }
+
                 document.add(RoW);
             }
-        return document;
+            int actuallSize = 0;
+            ArrayList<ArrayList<Object>> filtered = new ArrayList<>();
+            for(int i = 4 ; i< document.size(); i++){
+                if (document.get(i).get(0)==""){
+                    actuallSize = i;
+                    break;
+                }
+            }
+            for(int i = 0; i < actuallSize; i++){
+                filtered.add(document.get(i));
+            }
+
+
+
+
+
+            return filtered;
     }
 
 
