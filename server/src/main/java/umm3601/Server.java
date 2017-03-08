@@ -1,5 +1,7 @@
 package umm3601;
 
+import umm3601.Flowers.Flower;
+import umm3601.Flowers.flowerController;
 import umm3601.user.UserController;
 
 import java.io.IOException;
@@ -11,6 +13,7 @@ public class Server {
     public static void main(String[] args) throws IOException {
 
         UserController userController = new UserController();
+        flowerController FlowerController = new flowerController();
 
         options("/*", (request, response) -> {
 
@@ -42,6 +45,11 @@ public class Server {
             return userController.listUsers(req.queryMap().toMap());
         });
 
+        get("api/flowers", (req, res) -> {
+            res.type("application/json");
+            return FlowerController.listFlowers(req.queryMap().toMap());
+        });
+
         // See specific user
         get("api/users/:id", (req, res) -> {
             res.type("application/json");
@@ -55,11 +63,22 @@ public class Server {
             return userController.getAverageAgeByCompany();
         });
 
+        get("api/getBeds", (req, res) -> {
+            res.type("application/json");
+            return FlowerController.getBeds();
+        });
+
         // Handle "404" file not found requests:
         notFound((req, res) -> {
             res.type("text");
             res.status(404);
             return "Sorry, we couldn't find that!";
+        });
+
+        get("api/flowers/:id", (req, res) -> {
+            res.type("application/json");
+            String id = req.params("id");
+            return FlowerController.getFlower(id);
         });
 
     }
