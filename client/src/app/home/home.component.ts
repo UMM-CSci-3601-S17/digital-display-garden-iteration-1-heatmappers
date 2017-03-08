@@ -9,6 +9,15 @@ export class HomeComponent {
     public text: string;
 
     constructor() {
-        this.text = "Welcome!";
+        this.text = "Welcome to the Digital Display Garden!";
     }
+
+    public goQROnIphone() {
+        window.location.href='http://www.cnn.com/';
+    }
+
+    public goQROnAndroid() {
+        window.location.href='http://www.cnn.com/';
+    }
+
 }
