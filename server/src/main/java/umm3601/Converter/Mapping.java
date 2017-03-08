@@ -19,7 +19,7 @@ import org.bson.Document;
  */
 public class Mapping {
     public static void main(String[] arg) throws IOException {
-        final String FILE_NAME = "/home/saliy002/Downloads/shel.xlsx";
+        final String FILE_NAME = "/home/carav008/IdeaProjects/digital-display-garden-iteration-1-heatmappers/server/src/main/java/umm3601/Converter/AccessionList2016.xlsx";
         FileInputStream excelFile = new FileInputStream(new File(FILE_NAME));
         Converter v = new Converter();
         dataInsert(v.convertToLists(excelFile));

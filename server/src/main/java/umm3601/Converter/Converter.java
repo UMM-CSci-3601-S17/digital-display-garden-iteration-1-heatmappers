@@ -42,7 +42,7 @@ public class Converter extends ArrayList{
 
     public static void main(String[] args)throws IOException {
 
-        final String FILE_NAME = "/home/saliy002/Downloads/shel.xlsx";
+        final String FILE_NAME = "/home/carav008/IdeaProjects/digital-display-garden-iteration-1-heatmappers/server/src/main/java/umm3601/AccessionList2016.xlsx";
         FileInputStream excelFile = new FileInputStream(new File(FILE_NAME));
         System.out.println(convertToLists(excelFile));
 
