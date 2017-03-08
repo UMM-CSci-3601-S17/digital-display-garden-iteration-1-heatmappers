@@ -17,6 +17,7 @@ import org.bson.conversions.Bson;
 import org.bson.types.ObjectId;
 
 
+import javax.print.Doc;
 import java.io.IOException;
 import java.util.*;
 
@@ -184,8 +185,24 @@ public class flowerController {
                 = flowerCollection.aggregate(
                 Arrays.asList(
                         Aggregates.group("$Location",
-                                Accumulators.push("flowers", "$#")),
+                                    Accumulators.push("flowers", "$#")),
                         Aggregates.sort(Sorts.ascending("#"))
+                        )
+                )
+
+
+                ;
+        System.err.println(JSON.serialize(documents));
+        return JSON.serialize(documents);
+    }
+
+    public String getFlowers() {
+        AggregateIterable<Document> documents
+                = flowerCollection.aggregate(
+                Arrays.asList(
+                        Aggregates.group("$Common Name",
+                                Accumulators.push("flowers", "$_id")),
+                        Aggregates.sort(Sorts.ascending("_id"))
                 ));
         System.err.println(JSON.serialize(documents));
         return JSON.serialize(documents);

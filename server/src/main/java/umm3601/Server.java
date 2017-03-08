@@ -68,6 +68,11 @@ public class Server {
             return FlowerController.getBeds();
         });
 
+        get("api/getFlowers", (req, res) -> {
+            res.type("application/json");
+            return FlowerController.getFlowers();
+        });
+
         // Handle "404" file not found requests:
         notFound((req, res) -> {
             res.type("text");

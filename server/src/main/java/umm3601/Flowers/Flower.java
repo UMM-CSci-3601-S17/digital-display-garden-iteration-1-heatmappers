@@ -1,7 +1,10 @@
 package umm3601.Flowers;
 
 
+import org.bson.types.ObjectId;
+
 public class Flower{
+    ObjectId _id;
     String type;
     String number;
     String wall;
