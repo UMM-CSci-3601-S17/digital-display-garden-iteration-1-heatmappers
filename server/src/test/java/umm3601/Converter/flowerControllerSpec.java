@@ -30,7 +30,7 @@ public class flowerControllerSpec {
     @Before
     public void clearAndPopulateDB() throws IOException {
         MongoClient mongoClient = new MongoClient();
-        MongoDatabase db = mongoClient.getDatabase("test");
+        MongoDatabase db = mongoClient.getDatabase("test1");
         MongoCollection<Document> flowerDoc = db.getCollection("flowers" );
         flowerDoc.drop();
         List<Document> testFlowers = new ArrayList<>();
@@ -165,11 +165,5 @@ public class flowerControllerSpec {
         assertEquals("Names should match", expectedTypes, types);
     }
 
-    @Test
-    public void getFlowerByID() {
-        String jsonResult = FlowerController.getFlower(FlowerIdString);
-        Document flower = Document.parse(jsonResult);
-        assertEquals("Name should match", "Angelonia", flower.get("CommonName"));
-    }
 }
 

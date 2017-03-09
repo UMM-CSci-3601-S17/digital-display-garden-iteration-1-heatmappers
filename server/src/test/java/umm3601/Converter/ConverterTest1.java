@@ -55,7 +55,7 @@ public class ConverterTest1 {
 
         //testing that its getting all the rows and columns so there must be 362 instead of 358
         testHolder = convertToLists(excelFile);
-        assertEquals("size of the ArrayList of ArrayList should have 356 elements",testHolder.size(),362);
+        assertEquals("size of the ArrayList of ArrayList should have 356 elements",testHolder.size(),286);
 
 
         //testing that each ArrayList in the list of ArrayList has 8 elements
