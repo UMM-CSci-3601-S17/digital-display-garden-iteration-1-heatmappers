@@ -6,9 +6,12 @@
 
 
     <li *ngFor="let bed of beds"  class="list-group-item" value = "flowerNumber.">
-
-        ID: {{ bed._id }} <br><br>
-        Flowers in this Bed: {{ bed.CommonName}}<br/>
+                <!--Bed Location: {{bed["Location"]}}-->
+                        {{bed_.id}}
+               <br/>
+        <button>
+                Flower: {{ bed["_id"]["$oid"] }} <br><br>
+        </button>
     </li>
 </ul>
 

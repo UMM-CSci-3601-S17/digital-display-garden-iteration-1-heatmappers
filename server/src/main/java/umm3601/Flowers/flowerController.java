@@ -46,9 +46,9 @@ public class flowerController {
 
         List<Bson> aggregateParams = new ArrayList<Bson>();
 
-        if (queryParams.containsKey("owner")) {
-            String targetAge = (queryParams.get("owner")[0]);
-            aggregateParams.add(Aggregates.match(eq("owner", targetAge)));
+        if (queryParams.containsKey("location")) {
+            String targetAge = (queryParams.get("location")[0]);
+            aggregateParams.add(Aggregates.match(eq("location", targetAge)));
         }
 
 
@@ -184,11 +184,15 @@ public class flowerController {
                 = flowerCollection.aggregate(
                 Arrays.asList(
                         Aggregates.group("$Location",
-                                Accumulators.push("flowers", "$#")),
-                        Aggregates.sort(Sorts.ascending("#"))
+                                Accumulators.push("flowers", "$_id")),
+                        Aggregates.sort(Sorts.ascending("_id"))
                 ));
         System.err.println(JSON.serialize(documents));
         return JSON.serialize(documents);
     }
+
+
+
+
 
 }

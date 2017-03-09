@@ -1,6 +1,6 @@
 package umm3601;
 
-import umm3601.Flowers.Flower;
+
 import umm3601.Flowers.flowerController;
 import umm3601.user.UserController;
 
@@ -75,9 +75,17 @@ public class Server {
             return "Sorry, we couldn't find that!";
         });
 
-        get("api/flowers/:id", (req, res) -> {
+      //  get("api/flowers/:id", (req, res) -> {
+//        get("api/flowers/:id", (req, res) -> {
+//            res.type("application/json");
+//            String id = req.params("id");
+//            return FlowerController.getFlower(id);
+//        });
+
+        get("api/flowers/getBeds/:id", (req, res) -> {
             res.type("application/json");
             String id = req.params("id");
+            FlowerController.getBeds();
             return FlowerController.getFlower(id);
         });
 
