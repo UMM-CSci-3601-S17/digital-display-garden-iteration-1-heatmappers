@@ -58,7 +58,7 @@ public class Mapping {
             MongoDatabase test = mongoClient.getDatabase("test");
             MongoCollection Flower = test.getCollection("flowers");
 
-            for(int i = 4; i < data.size();i++){
+            for(int i = 0; i < data.size();i++){
 
                 Flower.insertOne(makeDocument(data,i));
             }

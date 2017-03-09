@@ -85,15 +85,18 @@ public class Converter extends ArrayList{
             }
             int actuallSize = 0;
             ArrayList<ArrayList<Object>> filtered = new ArrayList<>();
-            for(int i = 4 ; i< document.size(); i++){
-                if (document.get(i).get(0)==""){
-                    actuallSize = i;
-                    break;
+
+
+            for(int i = 4; i < document.size(); i++){
+                if(document.get(i).get(0)!=""&& document.get(i).get(6)!="") {
+                    filtered.add(document.get(i));
                 }
             }
-            for(int i = 0; i < actuallSize; i++){
-                filtered.add(document.get(i));
-            }
+
+
+
+
+
 
 
 
