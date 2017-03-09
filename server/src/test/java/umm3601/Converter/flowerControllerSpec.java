@@ -30,7 +30,7 @@ public class flowerControllerSpec {
     @Before
     public void clearAndPopulateDB() throws IOException {
         MongoClient mongoClient = new MongoClient();
-        MongoDatabase db = mongoClient.getDatabase("test1");
+        MongoDatabase db = mongoClient.getDatabase("test");
         MongoCollection<Document> flowerDoc = db.getCollection("flowers" );
         flowerDoc.drop();
         List<Document> testFlowers = new ArrayList<>();

@@ -35,7 +35,7 @@ public class MappingTest {
         assertEquals("should have size of 8 equal to test ArrayList",8,testString.size());
 
         //test that the names in the field assigner is correct
-        assertEquals("should be Common Name","Common Name",testString.get(1));
+        assertEquals("should be Common Name","commonName",testString.get(1));
         assertEquals("should be Common Name","Wall",testString.get(5));
     }
 
