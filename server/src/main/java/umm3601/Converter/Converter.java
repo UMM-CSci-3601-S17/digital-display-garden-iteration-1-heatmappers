@@ -1,61 +1,23 @@
 package umm3601.Converter;
-
-
-
 import org.apache.poi.ss.usermodel.*;
-        import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-        import java.io.File;
-        import java.io.FileInputStream;
-        import java.io.FileNotFoundException;
-        import java.io.IOException;
-        import java.util.ArrayList;
-        import java.util.Iterator;
-        import java.util.*;
+import java.io.FileInputStream;
 
-
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Iterator;
 
 public class Converter extends ArrayList{
-
-
-//    private final MongoCollection<Document> flowers;
-
-//    public Converter(){
-//        // Try connecting to a database
-//        MongoClient mongoClient = new MongoClient(); // Defaults!
-//
-//        MongoDatabase db = mongoClient.getDatabase("test");
-//
-//        flowers = db.getCollection("flowers");
-//
-//
-//
-//    }
-
-
-//    public void callDatabase(){
-//
-//    }
-//////////////    ADRESS SAMPLE    ////////////////////////////////////////
-///////final String FILE_NAME = "/home/saliy002/Downloads/shel.xlsx";//////
-///////////////////////////////////////////////////////////////////////////
-
-    public static void main(String[] args)throws IOException {
-
-        final String FILE_NAME = "/home/saliy002/Downloads/shel.xlsx";
-        FileInputStream excelFile = new FileInputStream(new File(FILE_NAME));
-        System.out.println(convertToLists(excelFile));
-
-    }
 
     public Converter(){
 
     }
 
-
+//took our base code off of http://www.mkyong.com/java/apache-poi-reading-and-writing-excel-file-in-java/
+    // then modified to fit our needs
     public static ArrayList<ArrayList<Object>> convertToLists(FileInputStream file1)throws IOException{
         ArrayList<ArrayList<Object>> document = new ArrayList<ArrayList<Object>>();
-            //FileInputStream excelFile = new FileInputStream(new File(FILE_NAME));
             Workbook workbook = new XSSFWorkbook(file1);
             Sheet datatypeSheet = workbook.getSheetAt(0);
             Iterator<Row> iterator = datatypeSheet.iterator();
@@ -80,28 +42,16 @@ public class Converter extends ArrayList{
                     counter++;
 
                 }
-
                 document.add(RoW);
             }
-            int actuallSize = 0;
             ArrayList<ArrayList<Object>> filtered = new ArrayList<>();
 
-
+            //getting rid of the flowers with no location
             for(int i = 4; i < document.size(); i++){
                 if(document.get(i).get(0)!=""&& document.get(i).get(6)!="") {
                     filtered.add(document.get(i));
                 }
             }
-
-
-
-
-
-
-
-
-
-
             return filtered;
     }
 

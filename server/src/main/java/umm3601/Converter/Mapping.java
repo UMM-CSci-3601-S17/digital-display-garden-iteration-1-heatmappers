@@ -2,16 +2,12 @@ package umm3601.Converter;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
-import java.net.UnknownHostException;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
-
 import com.mongodb.*;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
-import com.mongodb.util.JSON;
 import org.bson.Document;
 
 /**
@@ -19,24 +15,17 @@ import org.bson.Document;
  */
 public class Mapping {
     public static void main(String[] arg) throws IOException {
+
+        //using absolute path for iteration 1 can be fixed next iteration
         final String FILE_NAME = "/home/carav008/IdeaProjects/digital-display-garden-iteration-1-heatmappers/server/src/main/java/umm3601/Converter/AccessionList2016.xlsx";
         FileInputStream excelFile = new FileInputStream(new File(FILE_NAME));
-        Converter v = new Converter();
-        dataInsert(v.convertToLists(excelFile));
-
+        Converter sample = new Converter();
+        dataInsert(sample.convertToLists(excelFile));
 
     }
 
 
-    public static Document makeDocument(ArrayList<ArrayList<Object>> data, int row) {
-
-
-//            Mongo mongo = new Mongo("localhost", 27017);
-//            DB db = mongo.getDB("yourdb");
-//
-//            DBCollection collection = db.getCollection("dummyColl");
-
-
+        public static Document makeDocument(ArrayList<ArrayList<Object>> data, int row) {
 
 
                 Map<String, Object> documentMap = new HashMap<String, Object>();
@@ -48,10 +37,10 @@ public class Mapping {
                 Document document = new Document();
                 document.putAll(documentMap);
 
-
                 return document;
 
-    }
+        }
+
 
         public static void dataInsert(ArrayList<ArrayList<Object>> data){
             MongoClient mongoClient = new MongoClient();
@@ -62,8 +51,6 @@ public class Mapping {
 
                 Flower.insertOne(makeDocument(data,i));
             }
-
-
         }
 
         public static ArrayList<String> fieldAssigner(){

@@ -11,9 +11,7 @@ import { FilterBy } from "../users/filter.pipe";
 
 export class BedListComponent implements OnInit {
     public beds: Bed[];
-    public searchOwner: string = "";
-    public searchCategory: string = "";
-    public searchStatus: string = "";
+
 
     constructor(private bedListService: BedListService) {
         // this.todos = this.todoListService.getTodos();
@@ -27,46 +25,14 @@ export class BedListComponent implements OnInit {
             })
     };
 
-    private requestData(_id: any): any {
-        let holder = Array();
-        let searchAdd = "?";
-        let parameters = "";
-
-        if (_id != "")
-            holder["_id"] = _id;
-
-        for (let param in holder) {
-            parameters = parameters + searchAdd + param  + "=" + holder[param];
-            searchAdd = "&";
-        }
-
-        return parameters;
-    }
-
-    public request(_id: any) {
-        let requestParam: string = this.requestData(_id);
-        this.bedListService.getFilteredFlower(requestParam).subscribe(
-            beds => this.beds = beds,
-            err => {
-                console.log(err);
-            }
-        );
-    }
-
-        // private requestData(owner: string, category: string, status: any): string {
+    //Try to make it so when a flower is clicked it would route to that flower
+    // private requestData(_id: any): any {
     //     let holder = Array();
     //     let searchAdd = "?";
     //     let parameters = "";
     //
-    //
-    //     if (owner != "")
-    //         holder["owner"] = owner;
-    //
-    //     if (category != "")
-    //         holder["category"] = category;
-    //
-    //     if (status != "")
-    //         holder["status"] = status;
+    //     if (_id != "")
+    //         holder["_id"] = _id;
     //
     //     for (let param in holder) {
     //         parameters = parameters + searchAdd + param  + "=" + holder[param];
@@ -76,15 +42,14 @@ export class BedListComponent implements OnInit {
     //     return parameters;
     // }
     //
-    // public request(owner: string, category: string, status: any) {
-    //     let requestParam: string = this.requestData(owner, category, status);
-    //     this.todoListService.getFilteredTodos(requestParam).subscribe(
-    //         todos => this.todos = todos,
+    // public request(_id: any) {
+    //     let requestParam: string = this.requestData(_id);
+    //     this.bedListService.getFilteredFlower(requestParam).subscribe(
+    //         beds => this.beds = beds,
     //         err => {
     //             console.log(err);
     //         }
     //     );
-    //
-    //
     // }
+
 }

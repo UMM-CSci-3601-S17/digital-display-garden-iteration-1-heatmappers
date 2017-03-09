@@ -10,3 +10,5 @@ export interface Flower {
     location:string
 
 }
+
+// Tried to implement the flower pages. Did not have enough time though.

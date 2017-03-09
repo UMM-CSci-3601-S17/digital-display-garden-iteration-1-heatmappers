@@ -32,10 +32,10 @@ export class BedsComponent implements OnInit{
         }
     }
 
-    setId(id: string) {
-        this.id = id;
-        this.subscribeToServiceForId();
-    }
+    // setId(id: string) {
+    //     this.id = id;
+    //     this.subscribeToServiceForId();
+    // }
 
     ngOnInit(): void {
         this.subscribeToServiceForId();

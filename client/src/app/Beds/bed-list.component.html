@@ -1,6 +1,13 @@
 <ul class="list-group">
     <li class="list-group-item list-group-item-info">
-        <input #input class = "form-control" type="text"  placeholder="Find your Flower" (input)="commonName= $event.target.value">
+
+        <div class="right-inner-addon">
+            <i class="glyphicon glyphicon-search"></i>
+            <input #input class = "form-control glyphicon glyphicon-search" type="text"   (input)="commonName= $event.target.value">
+        </div>
+
+
+
 
         <h3>Select your bed :
         <select  [(ngModel)]="selectedLocation">
@@ -26,8 +33,7 @@
         Bed Location: {{bed["gardenLocation"]}} <br/>
         Common Name: {{bed["commonName"]}}<br/>
         Flower: {{ bed["_id"]["$oid"] }}
-
-                <br><br>
+                <br>
 
     </li>
 </ul>

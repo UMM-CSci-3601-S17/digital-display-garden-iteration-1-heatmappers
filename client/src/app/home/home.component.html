@@ -1,11 +1,15 @@
 
-<h2 class="center-text">Digital Display Garden</h2><br/>
-<h4 class="center-text">Home</h4>
-<p class = "center-text">{{ text }}</p>
+<h2 class="page-header"><span class="label label-info">Digital Display Garden</span></h2><br/>
+<h4> Home</h4>
+<p>{{ text }}</p>
 
 <br/>
 <div class = "center-text">
     <p>Click a link below to Download a QR Scanner</p>
-    <button (click)="goQROnIphone()">Download A QR Scanner on your Iphone</button>
-    <button (click)="goQROnAndroid()">Download A QR Scanner on your Android</button>
+    <button (click)="goQROnIphone()" class="btn btn-success "> Iphone
+        <span class="glyphicon glyphicon-qrcode" aria-hidden="true"></span>
+    </button>
+    <button (click)="goQROnAndroid()" class="btn btn-danger "> Android
+        <span class="glyphicon glyphicon-qrcode" aria-hidden="true"></span>
+    </button>
 </div>

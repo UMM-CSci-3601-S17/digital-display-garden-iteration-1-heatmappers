@@ -43,10 +43,7 @@ public class MappingTest {
 
     @Test
     public void TestDataInsert() throws IOException{
-//        String FILE_NAME = "/home/saliy002/Downloads/shel.xlsx";
-//        FileInputStream excelFile = new FileInputStream(new File(FILE_NAME));
-//        Converter v = new Converter();
-//        dataInsert(v.convertToLists(excelFile));
+
         ArrayList<ArrayList<Object>> mockData = new ArrayList<>();
         //test that inserts mock data into an Array
 

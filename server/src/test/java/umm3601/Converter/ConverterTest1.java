@@ -20,13 +20,6 @@ import static umm3601.Converter.Converter.convertToLists;
 public class ConverterTest1 {
 
 
-//    @Before
-//    public void setup() throws IOException{
-//        final String FILE_NAME = "/home/carav008/IdeaProjects/digital-display-garden-iteration-1-heatmappers/server/src/main/java/umm3601/AccessionList2016.xlsx";
-//        FileInputStream excelFile = new FileInputStream(new File(FILE_NAME));
-//    }
-
-
     //test to see if the the convertTo list does actually make it into an ArrayList of ArrayLists
     @Test
     public void TestConvertToLists() throws IOException{

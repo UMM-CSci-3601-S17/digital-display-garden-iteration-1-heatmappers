@@ -88,12 +88,6 @@ public class Server {
             return FlowerController.getFlower(id);
         });
 
-//        get("api/flowers/getBeds", (req, res) -> {
-//            res.type("application/json");
-//
-//            return  FlowerController.getBeds();
-//        });
-
     }
 
 }

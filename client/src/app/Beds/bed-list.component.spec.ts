@@ -19,16 +19,19 @@
 //         bedListServiceStub = {
 //             getBeds: () => Observable.of([
 //                 {
-//                     id: "uniqueId1",
-//                     location:"Bed1"
+//                     _id: "uniqueId1",
+//                     location:"Bed1",
+//                     CommonName: "disqus"
 //                 },
 //                 {
 //                     id: "uniqueId2",
-//                     location:"Bed2"
+//                     location:"Bed2",
+//                     CommonName: "Spencer"
 //                 },
 //                 {
 //                     id: "uniqueId3",
-//                     location:"Bed3"
+//                     location:"Bed3",
+//                     CommonName: "wrestle"
 //                 }
 //                 ])
 //         };
@@ -62,7 +65,7 @@
 //     });
 //
 //     it("has a specfic Specific and unique Id ", () => {
-//         expect(bedList.beds.filter((bed: Bed) => bed.id === "uniqueID1")).toBe(true);
+//         expect(bedList.beds.filter((bed: Bed) => bed._id === "uniqueID1")).toBe(true);
 //     });
 //
 // });
