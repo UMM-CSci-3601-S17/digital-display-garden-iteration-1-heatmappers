@@ -68,11 +68,6 @@ public class Server {
             return FlowerController.getBeds();
         });
 
-        get("api/getFlowers", (req, res) -> {
-            res.type("application/json");
-            return FlowerController.getFlowers();
-        });
-
         // Handle "404" file not found requests:
         notFound((req, res) -> {
             res.type("text");
@@ -80,18 +75,12 @@ public class Server {
             return "Sorry, we couldn't find that!";
         });
 
-//        get("api/flowers/:id", (req, res) -> {
-//            res.type("application/json");
-//            String id = req.params("id");
-//            return FlowerController.getFlower(id);
-//        });
-        //this might get the flower within the bed by id
-        get("api/flowers/getBeds/:id", (req, res) -> {
+        get("api/flowers/:id", (req, res) -> {
             res.type("application/json");
             String id = req.params("id");
-            FlowerController.getBeds();
             return FlowerController.getFlower(id);
         });
+
     }
 
 }

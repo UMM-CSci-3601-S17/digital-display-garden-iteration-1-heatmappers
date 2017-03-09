@@ -27,7 +27,7 @@ public class ConverterTest {
 //    }
 
 
-    //test to see if the the convertTo list does actually make it into an ArrayList of Array List
+    //test to see if the the convertTo list does actually make it into an ArrayList of ArrayLists
     @Test
     public void TestConvertToLists() throws IOException{
         ArrayList<ArrayList<Object>> testHolder =  new ArrayList<>();

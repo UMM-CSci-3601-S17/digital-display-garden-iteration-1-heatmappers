@@ -1,23 +1,25 @@
 package umm3601.Converter;
-
-import com.mongodb.MongoClient;
-import com.mongodb.client.MongoCollection;
-import com.mongodb.client.MongoDatabase;
-import org.bson.Document;
-
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.net.UnknownHostException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+
+import com.mongodb.*;
+import com.mongodb.client.MongoCollection;
+import com.mongodb.client.MongoDatabase;
+import com.mongodb.util.JSON;
+import org.bson.Document;
 
 /**
  * Created by saliy002 on 3/6/17.
  */
 public class Mapping {
     public static void main(String[] arg) throws IOException {
-        final String FILE_NAME = "/home/carav008/IdeaProjects/digital-display-garden-iteration-1-heatmappers/server/src/main/java/umm3601/Converter/AccessionList2016.xlsx";
+        final String FILE_NAME = "/home/saliy002/Downloads/shel.xlsx";
         FileInputStream excelFile = new FileInputStream(new File(FILE_NAME));
         Converter v = new Converter();
         dataInsert(v.convertToLists(excelFile));
