@@ -66,15 +66,15 @@ public class Mapping {
 
         }
 
-        private static ArrayList<String> fieldAssigner(){
+        public static ArrayList<String> fieldAssigner(){
             ArrayList<String> fields = new ArrayList<>();
-            fields.add("#");
-            fields.add("Common Name");
-            fields.add("Cultivar");
-            fields.add("Source");
-            fields.add("Type");
+            fields.add("plantID");
+            fields.add("commonName");
+            fields.add("cultivar");
+            fields.add("source");
+            fields.add("plantType");
             fields.add("Wall");
-            fields.add("Location");
+            fields.add("gardenLocation");
             fields.add("Description");
             return fields;
         }

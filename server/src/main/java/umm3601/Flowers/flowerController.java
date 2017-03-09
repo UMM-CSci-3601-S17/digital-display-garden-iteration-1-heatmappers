@@ -184,8 +184,8 @@ public class flowerController {
                 = flowerCollection.aggregate(
                 Arrays.asList(
                         Aggregates.group("$Location",
-                                Accumulators.push("flowers", "$_id")),
-                        Aggregates.sort(Sorts.ascending("_id"))
+                                Accumulators.push("flowers", "$Common Name")),
+                        Aggregates.sort(Sorts.ascending("Common Name"))
                 ));
         System.err.println(JSON.serialize(documents));
         return JSON.serialize(documents);
