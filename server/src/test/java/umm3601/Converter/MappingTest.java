@@ -1,4 +1,4 @@
-package umm3601.MappingTest;
+package umm3601.Converter;
 import com.mongodb.BasicDBObject;
 import com.mongodb.MongoClient;
 import com.mongodb.client.MongoCollection;
