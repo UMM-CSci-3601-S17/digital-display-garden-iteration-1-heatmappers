@@ -15,6 +15,6 @@ describe("Digital Display Garden", () => {
 
     it("says a message", async(() => {
         const comp = TestBed.createComponent(HomeComponent);
-        expect(comp.componentInstance.text).toBe("Welcome!");
+        expect(comp.componentInstance.text).toBe("Welcome to the Digital Display Garden!");
     }));
 });

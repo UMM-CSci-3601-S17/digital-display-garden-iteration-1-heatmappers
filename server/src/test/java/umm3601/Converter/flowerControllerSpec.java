@@ -155,13 +155,13 @@ public class flowerControllerSpec {
         String jsonResult = FlowerController.listFlowers(argMap);
         BsonArray docs = parseJsonArray(jsonResult);
 
-        assertEquals("Should be 2 types", 2, docs.size());
+        assertEquals("Should be 4 types", 4, docs.size());
         List<String> types = docs
                 .stream()
-                .map(flowerControllerSpec::getCommonName)
+                .map(flowerControllerSpec::getType)
                 .sorted()
                 .collect(Collectors.toList());
-        List<String> expectedTypes = Arrays.asList("Alternantherac", "Angelonia");
+        List<String> expectedTypes = Arrays.asList("S","S","V","V");
         assertEquals("Names should match", expectedTypes, types);
     }
 

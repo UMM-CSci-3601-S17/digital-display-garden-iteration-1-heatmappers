@@ -11,16 +11,7 @@
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
                 <li><a [routerLink]="['/']">Home</a></li>
-                <li role="presentation" class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" [routerLink]="['/beds']"  role="button" aria-haspopup="true" aria-expanded="false">
-                        Beds <span class="caret"></span>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><a [routerLink]="['/']">Home</a></li>
-                        <!--//will just show all flowers-->
-                        <li><a [routerLink]="['/beds']">Flowers</a></li>
-                    </ul>
-                </li>
+                <li><a [routerLink]="['/beds']">Beds</a></li>
                 <li><a [routerLink]="['/users']">Users</a></li>
             </ul>
         </div>

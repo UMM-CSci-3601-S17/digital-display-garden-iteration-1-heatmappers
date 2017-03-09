@@ -1,17 +1,32 @@
 <ul class="list-group">
     <li class="list-group-item list-group-item-info">
 
+        <h3>Select your bed :
+        <select id="ownerDropdown" [(ngModel)]="selectedOwner">
+            <option  value = ""></option>
+            <option  value = "5">5</option>
+            <option  value = "6">6</option>
+            <option  value = "7">7</option>
+            <option  value = "9">9</option>
+            <option  value = "10">10</option>
+            <option  value = "11">11</option>
+            <option  value = "13">13</option>
+            <option  value = "1N">1N</option>
+            <option  value = "1S">1S</option>
+            <option  value = "2N">2N</option>
+            <option  value = "2S">2S</option>
+            <option  value = "LG">LG</option>
+        </select></h3>
     </li>
 
 
 
-    <li *ngFor="let bed of beds"  class="list-group-item" value = "flowerNumber.">
-                <!--Bed Location: {{bed["Location"]}}-->
-                        {{bed_.id}}
+    <li *ngFor="let bed of beds | filterBy: {Location: selectedOwner}" class="list-group-item" >
+                Bed Location: {{bed["Location"]}}
                <br/>
-        <button>
-                Flower: {{ bed["_id"]["$oid"] }} <br><br>
-        </button>
+
+                Flower: {{ bed["_id"]["$oid"] }}<br><br>
+
     </li>
 </ul>
 

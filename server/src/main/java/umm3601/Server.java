@@ -75,19 +75,18 @@ public class Server {
             return "Sorry, we couldn't find that!";
         });
 
-      //  get("api/flowers/:id", (req, res) -> {
-//        get("api/flowers/:id", (req, res) -> {
-//            res.type("application/json");
-//            String id = req.params("id");
-//            return FlowerController.getFlower(id);
-//        });
 
-        get("api/flowers/getBeds/:id", (req, res) -> {
+        get("api/flowers/:id", (req, res) -> {
             res.type("application/json");
             String id = req.params("id");
-            FlowerController.getBeds();
             return FlowerController.getFlower(id);
         });
+
+//        get("api/flowers/getBeds", (req, res) -> {
+//            res.type("application/json");
+//
+//            return  FlowerController.getBeds();
+//        });
 
     }
 

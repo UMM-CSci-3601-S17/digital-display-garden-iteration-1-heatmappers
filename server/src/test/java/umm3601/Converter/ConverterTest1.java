@@ -17,7 +17,7 @@ import static umm3601.Converter.Converter.convertToLists;
 /**
  * Created by carav008 on 3/7/17.
  */
-public class ConverterTest {
+public class ConverterTest1 {
 
 
 //    @Before
@@ -34,13 +34,13 @@ public class ConverterTest {
         ArrayList<Object> test =  new ArrayList<>();
 
         String FILE_NAME = "/home/carav008/IdeaProjects/digital-display-garden-iteration-1-heatmappers/server/src/main/java/umm3601/Converter/AccessionList2016.xlsx";
-       FileInputStream excelFile = new FileInputStream(new File(FILE_NAME));
+        FileInputStream excelFile = new FileInputStream(new File(FILE_NAME));
 
-       testHolder = convertToLists(excelFile);
-       test = testHolder.get(4);
+        testHolder = convertToLists(excelFile);
+        test = testHolder.get(4);
 
 
-       assertEquals("the first element should be a type of type S","S",test.get(4));
+        assertEquals("the first element should be a type of type S","S",test.get(4));
 
     }
 
