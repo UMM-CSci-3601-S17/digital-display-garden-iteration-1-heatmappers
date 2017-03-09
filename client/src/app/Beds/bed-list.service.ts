@@ -29,7 +29,9 @@ export class BedListService {
     //     return this.http.request(this.bedUrl + "/" + id).map(res => res.json());
     // }
     //
-
+    getFilteredFlower(parameters: string): Observable<Bed[]> {
+        return this.http.request(this.bedUrl + parameters).map(res => res.json());
+    }
 
 
     getFlowersInBedById(id: string): Observable<Bed> {

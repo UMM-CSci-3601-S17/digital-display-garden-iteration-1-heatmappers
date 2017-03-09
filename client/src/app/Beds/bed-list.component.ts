@@ -27,7 +27,33 @@ export class BedListComponent implements OnInit {
             })
     };
 
-    // private requestData(owner: string, category: string, status: any): string {
+    private requestData(_id: any): any {
+        let holder = Array();
+        let searchAdd = "?";
+        let parameters = "";
+
+        if (_id != "")
+            holder["_id"] = _id;
+
+        for (let param in holder) {
+            parameters = parameters + searchAdd + param  + "=" + holder[param];
+            searchAdd = "&";
+        }
+
+        return parameters;
+    }
+
+    public request(_id: any) {
+        let requestParam: string = this.requestData(_id);
+        this.bedListService.getFilteredFlower(requestParam).subscribe(
+            beds => this.beds = beds,
+            err => {
+                console.log(err);
+            }
+        );
+    }
+
+        // private requestData(owner: string, category: string, status: any): string {
     //     let holder = Array();
     //     let searchAdd = "?";
     //     let parameters = "";

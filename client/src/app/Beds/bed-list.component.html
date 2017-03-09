@@ -1,8 +1,9 @@
 <ul class="list-group">
     <li class="list-group-item list-group-item-info">
+        <input #input class = "form-control" type="text"  placeholder="Find your Flower" (input)="commonName= $event.target.value">
 
         <h3>Select your bed :
-        <select id="ownerDropdown" [(ngModel)]="selectedOwner">
+        <select  [(ngModel)]="selectedLocation">
             <option  value = ""></option>
             <option  value = "5">5</option>
             <option  value = "6">6</option>
@@ -21,11 +22,12 @@
 
 
 
-    <li *ngFor="let bed of beds | filterBy: {Location: selectedOwner}" class="list-group-item" >
-                Bed Location: {{bed["Location"]}}
-               <br/>
+    <li *ngFor="let bed of beds | filterBy: {gardenLocation: selectedLocation} | filterBy: {commonName:commonName}" class="list-group-item" >
+        Bed Location: {{bed["gardenLocation"]}} <br/>
+        Common Name: {{bed["commonName"]}}<br/>
+        Flower: {{ bed["_id"]["$oid"] }}
 
-                Flower: {{ bed["_id"]["$oid"] }}<br><br>
+                <br><br>
 
     </li>
 </ul>

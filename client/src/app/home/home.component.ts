@@ -13,11 +13,11 @@ export class HomeComponent {
     }
 
     public goQROnIphone() {
-        window.location.href='http://www.cnn.com/';
+        window.location.href='https://itunes.apple.com/us/app/quick-scan-qr-code-reader/id483336864?mt=8';
     }
 
     public goQROnAndroid() {
-        window.location.href='http://www.cnn.com/';
+        window.location.href='https://play.google.com/store/apps/details?id=com.ihandysoft.barcode&hl=en';
     }
 
 }
