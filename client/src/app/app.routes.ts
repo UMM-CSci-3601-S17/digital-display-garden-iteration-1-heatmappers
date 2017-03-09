@@ -9,7 +9,8 @@ import {UserListComponent} from "./users/user-list.component";
 export const routes: Routes = [
     { path: '', component: HomeComponent },
     { path: 'users', component: UserListComponent },
-    { path: 'beds', component: BedsComponent }
+    { path: 'beds', component: BedsComponent },
+    { path: 'home', component: HomeComponent }
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(routes);

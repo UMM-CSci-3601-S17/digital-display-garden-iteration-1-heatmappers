@@ -34,6 +34,30 @@
   version "3.4.6"
   resolved "https://registry.yarnpkg.com/@angular/router/-/router-3.4.6.tgz#df708503f2006a090a2704f5490a9ea1ba9fc9d0"
 
+"@angular2-material/button@^ 2.0.0-alpha.8-2 ":
+  version "2.0.0-alpha.8-experimental3"
+  resolved "https://registry.yarnpkg.com/@angular2-material/button/-/button-2.0.0-alpha.8-experimental3.tgz#9effcb2c560e214a6d12d0c43da039da46339de4"
+
+"@angular2-material/card@^ 2.0.0-alpha.8-2 ":
+  version "2.0.0-alpha.8-experimental3"
+  resolved "https://registry.yarnpkg.com/@angular2-material/card/-/card-2.0.0-alpha.8-experimental3.tgz#2360ec8dadfdc5a90bbf667ceed7126aa9a20da2"
+
+"@angular2-material/core@^2.0.0-alpha.8-2":
+  version "2.0.0-alpha.8-experimental3"
+  resolved "https://registry.yarnpkg.com/@angular2-material/core/-/core-2.0.0-alpha.8-experimental3.tgz#7bf7714dda49bcc678fd32ff26573617c101d892"
+
+"@angular2-material/input@^ 2.0.0-alpha.8-2 ":
+  version "2.0.0-alpha.8-experimental3"
+  resolved "https://registry.yarnpkg.com/@angular2-material/input/-/input-2.0.0-alpha.8-experimental3.tgz#8a18cec7a84770ec76a7a0518e6e65ca958cecb8"
+
+"@angular2-material/toolbar@^ 2.0.0-alpha.8-2 ":
+  version "2.0.0-alpha.8-experimental3"
+  resolved "https://registry.yarnpkg.com/@angular2-material/toolbar/-/toolbar-2.0.0-alpha.8-experimental3.tgz#ff249105b832a174d21165f32910f20babc0e6f0"
+
+"@types/hammerjs@^2.0.6":
+  version "2.0.34"
+  resolved "https://registry.yarnpkg.com/@types/hammerjs/-/hammerjs-2.0.34.tgz#9cbac4f41cb039436141785e1be50b3ab10a04a9"
+
 abbrev@1:
   version "1.0.9"
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.0.9.tgz#91b4792588a7738c25f35dd6f63752a2f8776135"
@@ -92,6 +116,10 @@ alphanum-sort@^1.0.1, alphanum-sort@^1.0.2:
 amdefine@>=0.0.4:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
+
+angular2-disqus@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/angular2-disqus/-/angular2-disqus-5.0.0.tgz#c90da3f585d511a9602c4f36373978f6786d387f"
 
 angular2-template-loader@^0.6.0:
   version "0.6.0"
